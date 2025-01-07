@@ -1,0 +1,62 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin-top: 0;
+    padding: 0;
+    background: rgb(250, 212, 186)
+    
+
+}
+
+h1 {
+    text-align: left;
+    margin-top: 0px;
+    position: fixed;
+}
+/* Top Navigation Bar */
+.topnav {
+    background-color: rgb(182, 140, 101);
+    overflow: hidden;
+    margin-top: 40px;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    padding: 10px 20px;
+}
+
+.topnav a {
+    color: white;
+    float: left;
+    text-decoration: none;
+    padding: 14px 16px;
+    display: block;
+    text-align: center;
+    
+}
+
+.topnav a:hover {
+    background-color: #967255;
+    color: black;
+}
+
+/* Split Navigation Link */
+.topnav a.split {
+    background-color: #7c0000; /* A unique color for the split link */
+    color: white;
+    float: right;
+    padding: 14px 16px;
+    border-radius: 5px;
+}
+
+.topnav a.split:hover {
+    background-color: #610101;
+}
+
+/* Content Styling */
+aside {
+    background-color: rgb(238, 204, 182); /* change later after further thinking haha */
+}
+/* the products */
+main div {
+    text-align: center;
+}
