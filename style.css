@@ -1,62 +1,178 @@
-/* General Body Styling */
-body {
-    font-family: Arial, sans-serif;
-    margin-top: 0;
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
     padding: 0;
-    background: rgb(250, 212, 186)
-    
-
+    box-sizing: border-box;
+    font-family: 'Spartan',sans-serif;
 }
 
-h1 {
-    text-align: left;
-    margin-top: 0px;
-    position: fixed;
-}
-/* Top Navigation Bar */
-.topnav {
-    background-color: rgb(182, 140, 101);
-    overflow: hidden;
-    margin-top: 40px;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-    padding: 10px 20px;
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #f1e3dd;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
 }
 
-.topnav a {
-    color: white;
-    float: left;
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
     text-decoration: none;
-    padding: 14px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease; 
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #441e04;
+}
+
+#navbar li a:hover::after,
+#navbar li a.active::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #441e04;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#hero {
+    background-image: url(images/frontimage.jpg);
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h4 {
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 2.5px; 
+    padding-bottom: 15px;
+ 
+
+}
+
+#hero h2 {
+    text-shadow: 2px 2px #441e04;
+    color: rgb(250, 223, 201)
+
+
+}
+
+#hero h1 {
+    color: rgb(250, 223, 201)
+}
+
+#product1 {
+    background: #f1e3dd;
+    padding-top: 40px;
+    text-align: center;
+}
+
+#product1 .pro-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+#product1 .pro {
+    width: 20%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid rgb(250, 223, 201);
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    position: relative;
+}
+
+#product1 .pro img {
+    border-radius: 25px;
+    width: 100%;
+}
+
+#product1 .pro .des {
+    padding: 10px 0;
+}
+
+#product1 .pro .cart {
+    border-radius: 25px;
+    background-color: #ffcece;
+    font-weight: 500;
+    color: #df5353;
+    border: 1px solid #da4141;
+    padding: 5px;
+    position: bottom;
+}
+
+/*Contact US Form Page*/
+#form-details {
+    display: flex;
+    background: #f1e3dd;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 80px;
+    border: 1px solid #e1e1e1;
+}
+
+#form-details form {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#form-details form input,
+#form-details form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+}
+
+#form-details form button {
+    background-color: #f5a3a3;
+    color: #000000;
+    padding: 5px;
+}
+
+#form-details .people div p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 25px;
+}
+
+#form-details .people div span {
     display: block;
-    text-align: center;
-    
-}
-
-.topnav a:hover {
-    background-color: #967255;
-    color: black;
-}
-
-/* Split Navigation Link */
-.topnav a.split {
-    background-color: #7c0000; /* A unique color for the split link */
-    color: white;
-    float: right;
-    padding: 14px 16px;
-    border-radius: 5px;
-}
-
-.topnav a.split:hover {
-    background-color: #610101;
-}
-
-/* Content Styling */
-aside {
-    background-color: rgb(238, 204, 182); /* change later after further thinking haha */
-}
-/* the products */
-main div {
-    text-align: center;
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
 }
