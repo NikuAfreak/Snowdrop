@@ -2,20 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snowdrop Shopping Cart</title>
-
-    <!-- font import -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
-
-    <!-- css file link -->
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
-    
     <section id="header">
         <a href="#"><img src="images/logo.png" width="200" class="logo" alt=""></a>
         <div>
@@ -23,71 +14,36 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li><a class="active" href="cart.html">Cart</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
             </ul>
         </div>
     </section>
 
     <section id="cart" class="section-p1">
+        <h2>Your Shopping Cart</h2>
         <table width="100%">
             <thead>
                 <tr>
-                    <td>Remove</td>
                     <td>Image</td>
                     <td>Product</td>
                     <td>Price</td>
                     <td>Quantity</td>
                     <td>Subtotal</td>
+                    <td>Remove</td>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td><a href="#"><i class="fas fa-times-circle" style="color:black"></i></a></td>
-                    <td><img src="images/home1.jpg" alt=""></td>
-                    <td>Floretta</td>
-                    <td>RM 78</td>
-                    <td><input type="number" value="1"></td>
-                    <td>RM 78</td>
-                </tr>
-                <tr>
-                    <td><a href="#"><i class="fas fa-times-circle" style="color:black"></i></a></td>
-                    <td><img src="images/home2.jpg" alt=""></td>
-                    <td>Dahlia Dream</td>
-                    <td>RM 78</td>
-                    <td><input type="number" value="1"></td>
-                    <td>RM 78</td>
-                </tr>
-                <tr>
-                    <td><a href="#"><i class="fas fa-times-circle" style="color:black"></i></a></td>
-                    <td><img src="images/home3.jpg" alt=""></td>
-                    <td>Bloomelle</td>
-                    <td>RM 78</td>
-                    <td><input type="number" value="1"></td>
-                    <td>RM 78</td>
-                </tr>
+            <tbody id="cart-items">
+                <!-- Cart items will be dynamically added here -->
             </tbody>
         </table>
-    </section>
-
-    <section id="cart-add" class="section-p1">
-        <div class="subtotal">
-            <h3>Cart Totals</h3>
-            <table>
-                <tr>
-                    <td>Cart Subtotal</td>
-                    <td>RM 234</td>
-                </tr>
-                <tr>
-                    <td>Shipping</td>
-                    <td>Free</td>
-                </tr>
-                <tr>
-                    <td><strong>Total</strong></td>
-                    <td><strong> RM 234</strong></td>
-                </tr>
-            </table>
-            <button class="normal">Proceed to checkout</button>
+        <div id="cart-total">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3>Total: RM <span id="total-price">0</span></h3>
+                <button id="checkout-button" onclick="checkout()">Checkout</button>
+            </div>
         </div>
     </section>
 
+    <script src="script.js"></script>
 </body>
+</html>
