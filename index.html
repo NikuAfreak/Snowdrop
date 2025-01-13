@@ -6,13 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snowdrop</title>
     <link rel="stylesheet" href="style.css">
-
-    <!-- for icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-rL+j+Z/rE9+r/r2k6rB+5rEym5BJo7yyjYU/1Fyo5cQ8lW/9N4/VtQIuG/iJQ" crossorigin="anonymous">
 </head>
 <body>  
 
-    <!-- Navigation Bar also note that the checkout will be using a split navigation bar-->
     <section id="header">
         <a href="#"><img src="images/logo.png" width="200" class="logo" alt=""></a>
         <div>
@@ -20,7 +17,7 @@
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="cart.html">Cart</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
             </ul>
         </div>
         <div id="mobile">
@@ -29,63 +26,80 @@
     </section>
     
     <section id="hero">
-        <h4>Limited offfer</h4>
+        <h4>Limited offer</h4>
         <h2>Buy 2 free 1</h2>
         <h1>On all products</h1>
         <p>Save more with each purchase!</p>
     </section>
 
-    <!-- this is the bestselling collectiong -->
     <section id="product1" class="section-p1">
         <h2>Our Bestselling Collection</h2>
         <p>Flower Collection</p>
         <div class="pro-container">
             <div class="pro">
-                <img src="images/home1.jpg" alt="">
+                <img src="images/floretta.jpg" alt="" onclick="openModal('Floretta', 78, 'Introducing our exclusive limited edition design from the enchanting Flower Collection.Each piece is a celebration of nature beauty, meticulously crafted to bring a touch of elegance to your everyday life', 'images/floretta.jpg')">
                 <div class="des">
                     <span>Flower Collection</span>
                     <h5>Floretta</h5>
                     <h4>RM 78</h4>
                 </div>
-                <a href="#"><i class="cart">Add to Cart</i></a>
+                <a href="#" class="add-to-cart" data-name="Floretta" data-price="78"><i class="cart">Add to Cart</i></a>
             </div>
             <div class="pro">
-                <img src="images/home2.jpg" alt="">
+                <img src="images/dahliadream.jpg" alt="" onclick="openModal('Dahlia Dream', 78, 'Introducing our exclusive limited edition design from the enchanting Flower Collection.Each piece is a celebration of nature beauty, meticulously crafted to bring a touch of elegance to your everyday life.', 'images/dahliadream.jpg')">
                 <div class="des">
                     <span>Flower Collection</span>
                     <h5>Dahlia Dream</h5>
                     <h4>RM 78</h4>
                 </div>
-                <a href="#"><i class="cart">Add to Cart</i></a>
+                <a href="#" class="add-to-cart" data-name="Dahlia Dream" data-price="78"><i class="cart">Add to Cart</i></a>
             </div>
             <div class="pro">
-                <img src="images/home3.jpg" alt="">
+                <img src="images/bloomelle.jpg" alt="" onclick="openModal('Bloomelle', 78, 'Introducing our exclusive limited edition design from the enchanting Flower Collection.Each piece is a celebration of nature beauty, meticulously crafted to bring a touch of elegance to your everyday life.', 'images/bloomelle.jpg')">
                 <div class="des">
                     <span>Flower Collection</span>
                     <h5>Bloomelle</h5>
                     <h4>RM 78</h4>
                 </div>
-                <a href="#"><i class="cart">Add to Cart</i></a>
+                <a href="#" class="add-to-cart" data-name="Bloomelle" data-price="78"><i class="cart">Add to Cart</i></a>
             </div>
             <div class="pro">
-                <img src="images/home4.jpg" alt="">
+                <img src="images/zarabloom.jpg" alt="" onclick="openModal('Zara Bloom', 78, 'Introducing our exclusive limited edition design from the enchanting Flower Collection.Each piece is a celebration of nature beauty, meticulously crafted to bring a touch of elegance to your everyday life.', 'images/zarabloom.jpg')">
                 <div class="des">
                     <span>Flower Collection</span>
                     <h5>Zara Bloom</h5>
                     <h4>RM 78</h4>
                 </div>
-                <a href="#"><i class="cart">Add to Cart</i></a>
+                <a href="#" class="add-to-cart" data-name="Zara Bloom" data-price="78"><i class="cart">Add to Cart</i></a>
             </div>
             <div class="pro">
-                <img src="images/home5.jpg" alt="">
+                <img src="images/freesiaglow.jpg" alt="" onclick="openModal('Freesia Glow', 78, 'Introducing our exclusive limited edition design from the enchanting Flower Collection.Each piece is a celebration of nature beauty, meticulously crafted to bring a touch of elegance to your everyday life.', 'images/freesiaglow.jpg')">
                 <div class="des">
                     <span>Flower Collection</span>
                     <h5>Freesia Glow</h5>
                     <h4>RM 78</h4>
                 </div>
-                <a href="#"><i class="cart">Add to Cart</i></a>
+                <a href="#" class="add-to-cart" data-name="Freesia Glow" data-price="78"><i class="cart">Add to Cart</i></a>
             </div>
+        </div>
     </section>
 
+   <!-- Modal Structure -->
+<div id="product-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <div class="modal-body">
+            <img id="modal-product-image" src="" alt="" class="modal-image">
+            <div class="modal-details">
+                <h2 id="modal-product-name"></h2>
+                <p id="modal-product-description"></p>
+                <p id="modal-product-price"></p>
+                
+                <button id="add-to-cart-button" onclick="addToCart(modalProductName, modalProductPrice)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
 </body>
 </html>
