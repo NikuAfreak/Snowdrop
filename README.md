@@ -12,3 +12,5 @@ Snowdrop, your trusted destination for elegant and modest hijabs. We offer a cur
 ## Notes:
 1. The data submission for the Contact Us page cannot be retrieved from the live GitHub Page. This is because GitHub does not support APIs through free public websites.
 2. To acces the data from the submissions, the website must be hosted on a local server. The data can be accessed by going to Inspect mode, Navigate to the Storage tab, Local Storage, and click contactFormData.
+3. The products bar on the navigation bar can be hovered to show a dropdown menu of the collections our shop offer.
+4. Products can be clicked on the image or name to show a modal pop-up. The modal pop-up shows the name, description, and price.
