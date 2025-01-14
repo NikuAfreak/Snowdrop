@@ -65,12 +65,12 @@ addToCartButtons.forEach(button => {
                 <td>${item.name}</td>
                 <td>RM ${item.price}</td>
                 <td>
-                    <button onclick="updateQuantity(${index}, 1)">+</button>
+                     <button onclick="updateQuantity(${index}, -1)">-</button>
                     <span>${item.quantity}</span>
-                    <button onclick="updateQuantity(${index}, -1)">-</button>
+                    <button onclick="updateQuantity(${index}, 1)">+</button>
                 </td>
                 <td>RM ${subtotal.toFixed(2)}</td>
-                <td><button class="remove-button" onclick="removeItem(${index})">X</button></td>
+                <td><button class="remove-button" onclick="removeItem(${index})">x</button></td>
             `;
             cartItemsContainer.appendChild(row);
         });
