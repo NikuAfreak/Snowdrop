@@ -13,7 +13,15 @@
         <div>
             <ul id="navbar">
                 <li><a href="index.html">Home</a></li>
-                <li><a class="active" href="products.html">Products</a></li>
+                <li class="dropdown">
+                    <a href="products.html" class="dropbtn">Products</a>
+                <div class="dropdown-content">
+                    <a href="products.html?collection=All Products">All Products</a>
+                    <a href="flower_collection.html?collection=Flower Collection">Flower Collection</a>
+                    <a href="square_collection.html?collection=Square Collection">Square Collection</a>
+                    <a href="instant_collection.html?collection=Instant Collection">Instant Collection</a>
+                </div>
+                </li>    
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
             </ul>
@@ -27,7 +35,7 @@
     <section id="product1" class="section-p1">
         <h2>Flower Collection</h2>
         <div class="pro-container">
-            <div class="pro">
+            <div class="pro" data-category="Flower Collection">
                 <img src="images/floretta.jpg" alt="" onclick="openModal('Floretta', 78, 'Introducing our exclusive limited edition design from the enchanting Flower Collection.Each piece is a celebration of nature beauty, meticulously crafted to bring a touch of elegance to your everyday life.', 'images/floretta.jpg')">
                 <div class="des">
                     <span>Flower Collection</span>
@@ -36,7 +44,7 @@
                 </div>
                 <a href="#" class="add-to-cart" data-name="Floretta" data-price="78"><i class="cart">Add to Cart</i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-category="Flower Collection">
                 <img src="images/dahliadream.jpg" alt="" onclick="openModal('Dahlia Dream', 78, 'Introducing our exclusive limited edition design from the enchanting Flower Collection.Each piece is a celebration of nature beauty, meticulously crafted to bring a touch of elegance to your everyday life.', 'images/dahliadream.jpg')">
                 <div class="des">
                     <span>Flower Collection</span>
@@ -45,7 +53,7 @@
                 </div>
                 <a href="#" class="add-to-cart" data-name="Dahlia Dream" data-price="78"><i class="cart">Add to Cart</i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-category="Flower Collection">
                 <img src="images/bloomelle.jpg" alt="" onclick="openModal('Bloomelle', 78, 'Introducing our exclusive limited edition design from the enchanting Flower Collection.Each piece is a celebration of nature beauty, meticulously crafted to bring a touch of elegance to your everyday life.', 'images/bloomelle.jpg')">
                 <div class="des">
                     <span>Flower Collection</span>
@@ -54,7 +62,7 @@
                 </div>
                 <a href="#" class="add-to-cart" data-name="Bloomelle" data-price="78"><i class="cart">Add to Cart</i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-category="Flower Collection">
                 <img src="images/zarabloom.jpg" alt="" onclick="openModal('Zara Bloom', 78, 'Introducing our exclusive limited edition design from the enchanting Flower Collection.Each piece is a celebration of nature beauty, meticulously crafted to bring a touch of elegance to your everyday life.', 'images/zarabloom.jpg')">
                 <div class="des">
                     <span>Flower Collection</span>
@@ -63,7 +71,7 @@
                 </div>
                 <a href="#" class="add-to-cart" data-name="Zara Bloom" data-price="78"><i class="cart">Add to Cart</i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-category="Flower Collection">
                 <img src="images/freesiaglow.jpg" alt="" onclick="openModal('Freesia Glow', 78, 'Introducing our exclusive limited edition design from the enchanting Flower Collection.Each piece is a celebration of nature beauty, meticulously crafted to bring a touch of elegance to your everyday life.', 'images/freesiaglow.jpg')">
                 <div class="des">
                     <span>Flower Collection</span>
@@ -76,7 +84,7 @@
 
         <h2>Square Collection</h2>
         <div class="pro-container">
-            <div class="pro">
+            <div class="pro" data-category="Square Collection">
                 <img src="images/lightgray.jpg" alt="" onclick="openModal('Light Gray', 45, 'Introducing our Plain Square Hijab, a versatile and essential piece for any wardrobe. Crafted from soft, breathable fabric, this hijab offers a smooth drape and comfortable wear, making it perfect for everyday use or special occasions.', 'images/lightgray.jpg')">
                 <div class="des">
                     <span>Square Collection</span>
@@ -85,7 +93,7 @@
                 </div>
                 <a href="#" class="add-to-cart" data-name="Light Gray" data-price="45"><i class="cart">Add to Cart</i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-category="Square Collection">
                 <img src="images/lightbrown.jpg" alt="" onclick="openModal('Light Brown', 45, 'Introducing our Plain Square Hijab, a versatile and essential piece for any wardrobe. Crafted from soft, breathable fabric, this hijab offers a smooth drape and comfortable wear, making it perfect for everyday use or special occasions.', 'images/lightbrown.jpg')">
                 <div class="des">
                     <span>Square Collection</span>
@@ -94,7 +102,7 @@
                 </div>
                 <a href="#" class="add-to-cart" data-name="Light Brown" data-price="45"><i class="cart">Add to Cart</i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-category="Square Collection">
                 <img src="images/griffin.jpg" alt="" onclick="openModal('Griffin', 45, 'Introducing our Plain Square Hijab, a versatile and essential piece for any wardrobe. Crafted from soft, breathable fabric, this hijab offers a smooth drape and comfortable wear, making it perfect for everyday use or special occasions.', 'images/griffin.jpg')">
                 <div class="des">
                     <span>Square Collection</span>
@@ -103,7 +111,7 @@
                 </div>
                 <a href="#" class="add-to-cart" data-name="Griffin" data-price="45"><i class="cart">Add to Cart</i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-category="Square Collection">
                 <img src="images/rose.jpg" alt="" onclick="openModal('Rose', 45, 'Introducing our Plain Square Hijab, a versatile and essential piece for any wardrobe. Crafted from soft, breathable fabric, this hijab offers a smooth drape and comfortable wear, making it perfect for everyday use or special occasions.', 'images/rose.jpg')">
                 <div class="des">
                     <span>Square Collection</span>
@@ -112,7 +120,7 @@
                 </div>
                 <a href="#" class="add-to-cart" data-name="Rose" data-price="45"><i class="cart">Add to Cart</i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-category="Square Collection">
                 <img src="images/morningmist.jpg" alt="" onclick="openModal('Morning Mist', 45, 'Introducing our Plain Square Hijab, a versatile and essential piece for any wardrobe. Crafted from soft, breathable fabric, this hijab offers a smooth drape and comfortable wear, making it perfect for everyday use or special occasions.', 'images/morningmist.jpg')">
                 <div class="des">
                     <span>Square Collection</span>
@@ -125,7 +133,7 @@
 
         <h2>Instant Collection</h2>
         <div class="pro-container">
-            <div class="pro">
+            <div class="pro" data-category="Instant Collection">
                 <img src="images/gray.jpg" alt="" onclick="openModal('Gray', 55, 'Our Instant Shawl is crafted for the modern woman on the go. Featuring an easy-to-wear design and lightweight fabric, it allows you to achieve a chic look in seconds!', 'images/gray.jpg')">
                 <div class="des">
                     <span>Instant Collection</span>
@@ -135,7 +143,7 @@
                 <a href="#" class="add-to-cart" data-name="Gray" data-price="55"><i class="cart">Add to Cart</i></a>
             </div>
 
-            <div class="pro">
+            <div class="pro" data-category="Instant Collection">
                 <img src="images/fadingpink.jpg" alt="" onclick="openModal('Fading Pink', 55, 'Our Instant Shawl is crafted for the modern woman on the go. Featuring an easy-to-wear design and lightweight fabric, it allows you to achieve a chic look in seconds!', 'images/fadingpink.jpg')">
                 <div class="des">
                     <span>Instant Collection</span>
@@ -145,7 +153,7 @@
                 <a href="#" class="add-to-cart" data-name="Fading Pink" data-price="55"><i class="cart">Add to Cart</i></a>
             </div>
 
-            <div class="pro">
+            <div class="pro" data-category="Instant Collection">
                 <img src="images/dustypurple.jpg" alt="" onclick="openModal('Dusty Purple', 55, 'Our Instant Shawl is crafted for the modern woman on the go. Featuring an easy-to-wear design and lightweight fabric, it allows you to achieve a chic look in seconds!', 'images/dustypurple.jpg')">
                 <div class="des">
                     <span>Instant Collection</span>
@@ -155,7 +163,7 @@
                 <a href="#" class="add-to-cart" data-name="Dusty Purple" data-price="55"><i class="cart">Add to Cart</i></a>
             </div>
 
-            <div class="pro">
+            <div class="pro" data-category="Instant Collection">
                 <img src="images/dustypink.jpg" alt="" onclick="openModal('Dusty Pink', 55, 'Our Instant Shawl is crafted for the modern woman on the go. Featuring an easy-to-wear design and lightweight fabric, it allows you to achieve a chic look in seconds!', 'images/dustypink.jpg')">
                 <div class="des">
                     <span>Instant Collection</span>
@@ -165,7 +173,7 @@
                 <a href="#" class="add-to-cart" data-name="Dusty Pink" data-price="55"><i class="cart">Add to Cart</i></a>
             </div>
 
-            <div class="pro">
+            <div class="pro" data-category="Instant Collection">
                 <img src="images/duskblue.jpg" alt="" onclick="openModal('Dusk Blue', 55, 'Our Instant Shawl is crafted for the modern woman on the go. Featuring an easy-to-wear design and lightweight fabric, it allows you to achieve a chic look in seconds!', 'images/duskblue.jpg')">
                 <div class="des">
                     <span>Instant Collection</span>
@@ -193,8 +201,10 @@
         </div>
     </div>
 </div>
-    
 
     <script src="script.js"></script>
+    <script src="scriptJQuery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 </body>
 </html>

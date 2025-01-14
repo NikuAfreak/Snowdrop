@@ -12,7 +12,15 @@
         <div>
             <ul id="navbar">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
+                <li class="dropdown">
+                <a href="products.html" class="dropbtn">Products</a>
+                <div class="dropdown-content">
+                    <a href="products.html?collection=All Products">All Products</a>
+                    <a href="products.html?collection=Flower Collection">Flower Collection</a>
+                    <a href="products.html?collection=Square Collection">Square Collection</a>
+                    <a href="products.html?collection=Instant Collection">Instant Collection</a>
+                </div>
+                </li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
             </ul>
@@ -45,5 +53,6 @@
     </section>
 
     <script src="script.js"></script>
+
 </body>
 </html>

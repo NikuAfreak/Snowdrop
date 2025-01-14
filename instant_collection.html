@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Snowdrop Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+
+    <section id="header">
+        <a href="#"><img src="images/logo.png" width="200" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="products.html" class="dropbtn">Products</a>
+                <div class="dropdown-content">
+                    <a href="products.html?collection=All Products">All Products</a>
+                    <a href="flower_collection.html?collection=Flower Collection">Flower Collection</a>
+                    <a href="square_collection.html?collection=Square Collection">Square Collection</a>
+                    <a href="instant_collection.html?collection=Instant Collection">Instant Collection</a>
+                </div>
+                </li>    
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Instant Collection</h2>
+        <div class="pro-container">
+            <div class="pro" data-category="Instant Collection">
+                <img src="images/gray.jpg" alt="" onclick="openModal('Gray', 55, 'Our Instant Shawl is crafted for the modern woman on the go. Featuring an easy-to-wear design and lightweight fabric, it allows you to achieve a chic look in seconds!', 'images/gray.jpg')">
+                <div class="des">
+                    <span>Instant Collection</span>
+                    <h5> Gray</h5>
+                    <h4>RM 55</h4>
+                </div>
+                <a href="#" class="add-to-cart" data-name="Gray" data-price="55"><i class="cart">Add to Cart</i></a>
+            </div>
+
+            <div class="pro" data-category="Instant Collection">
+                <img src="images/fadingpink.jpg" alt="" onclick="openModal('Fading Pink', 55, 'Our Instant Shawl is crafted for the modern woman on the go. Featuring an easy-to-wear design and lightweight fabric, it allows you to achieve a chic look in seconds!', 'images/fadingpink.jpg')">
+                <div class="des">
+                    <span>Instant Collection</span>
+                    <h5>Fading Pink</h5>
+                    <h4>RM 55</h4>
+                </div>
+                <a href="#" class="add-to-cart" data-name="Fading Pink" data-price="55"><i class="cart">Add to Cart</i></a>
+            </div>
+
+            <div class="pro" data-category="Instant Collection">
+                <img src="images/dustypurple.jpg" alt="" onclick="openModal('Dusty Purple', 55, 'Our Instant Shawl is crafted for the modern woman on the go. Featuring an easy-to-wear design and lightweight fabric, it allows you to achieve a chic look in seconds!', 'images/dustypurple.jpg')">
+                <div class="des">
+                    <span>Instant Collection</span>
+                    <h5>Dusty Purple</h5>
+                    <h4>RM 55</h4>
+                </div>
+                <a href="#" class="add-to-cart" data-name="Dusty Purple" data-price="55"><i class="cart">Add to Cart</i></a>
+            </div>
+
+            <div class="pro" data-category="Instant Collection">
+                <img src="images/dustypink.jpg" alt="" onclick="openModal('Dusty Pink', 55, 'Our Instant Shawl is crafted for the modern woman on the go. Featuring an easy-to-wear design and lightweight fabric, it allows you to achieve a chic look in seconds!', 'images/dustypink.jpg')">
+                <div class="des">
+                    <span>Instant Collection</span>
+                    <h5>Dusty Pink</h5>
+                    <h4>RM 55</h4>
+                </div>
+                <a href="#" class="add-to-cart" data-name="Dusty Pink" data-price="55"><i class="cart">Add to Cart</i></a>
+            </div>
+
+            <div class="pro" data-category="Instant Collection">
+                <img src="images/duskblue.jpg" alt="" onclick="openModal('Dusk Blue', 55, 'Our Instant Shawl is crafted for the modern woman on the go. Featuring an easy-to-wear design and lightweight fabric, it allows you to achieve a chic look in seconds!', 'images/duskblue.jpg')">
+                <div class="des">
+                    <span>Instant Collection</span>
+                    <h5>Dusk Blue</h5>
+                    <h4>RM 55</h4>
+                </div>
+                <a href="#" class="add-to-cart" data-name="Dusk Blue" data-price="55"><i class="cart">Add to Cart</i></a>
+            </div>
+        </div>
+    </section>
+
+   <!-- Modal Structure -->
+   <div id="product-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <div class="modal-body">
+            <img id="modal-product-image" src="" alt="" class="modal-image">
+            <div class="modal-details">
+                <h2 id="modal-product-name"></h2>
+                <p id="modal-product-description"></p>
+                <p id="modal-product-price"></p>
+                
+                <button id="add-to-cart-button" onclick="addToCart(modalProductName, modalProductPrice)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+    <script src="scriptJQuery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+</body>
+</html>

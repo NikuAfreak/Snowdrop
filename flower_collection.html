@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snowdrop</title>
+    <title> Snowdrop Products</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-rL+j+Z/rE9+r/r2k6rB+5rEym5BJo7yyjYU/1Fyo5cQ8lW/9N4/VtQIuG/iJQ" crossorigin="anonymous">
 </head>
 <body>  
 
@@ -14,40 +12,27 @@
         <a href="#"><img src="images/logo.png" width="200" class="logo" alt=""></a>
         <div>
             <ul id="navbar">
-                <li><a class="active" href="index.html">Home</a></li>
-
+                <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                <a href="products.html" class="dropbtn">Products</a>
+                    <a href="products.html" class="dropbtn">Products</a>
                 <div class="dropdown-content">
                     <a href="products.html?collection=All Products">All Products</a>
                     <a href="products.html?collection=Flower Collection">Flower Collection</a>
                     <a href="products.html?collection=Square Collection">Square Collection</a>
                     <a href="products.html?collection=Instant Collection">Instant Collection</a>
                 </div>
-                </li>
+                </li>    
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
             </ul>
         </div>
-        <div id="mobile">
-            <i id="bar" class="fas fa-outdent">test</i>
-        </div>
     </section>
     
-    <section id="hero">
-        <h4>Limited offer</h4>
-        <h2>Buy 2 free 1</h2>
-        <h1>On all products</h1>
-        <p>Save more with each purchase!</p>
-        <a href="#product1"><button id="best-selling-btn">Best Seller</button></a>
-    </section>
-
     <section id="product1" class="section-p1">
-        <h2>Our Bestselling Collection</h2>
-        <p>Flower Collection</p>
+        <h2>Flower Collection</h2>
         <div class="pro-container">
-            <div class="pro">
-                <img src="images/floretta.jpg" alt="" onclick="openModal('Floretta', 78, 'Introducing our exclusive limited edition design from the enchanting Flower Collection.Each piece is a celebration of nature beauty, meticulously crafted to bring a touch of elegance to your everyday life', 'images/floretta.jpg')">
+            <div class="pro" data-category="Flower Collection">
+                <img src="images/floretta.jpg" alt="" onclick="openModal('Floretta', 78, 'Introducing our exclusive limited edition design from the enchanting Flower Collection.Each piece is a celebration of nature beauty, meticulously crafted to bring a touch of elegance to your everyday life.', 'images/floretta.jpg')">
                 <div class="des">
                     <span>Flower Collection</span>
                     <h5>Floretta</h5>
@@ -55,7 +40,7 @@
                 </div>
                 <a href="#" class="add-to-cart" data-name="Floretta" data-price="78"><i class="cart">Add to Cart</i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-category="Flower Collection">
                 <img src="images/dahliadream.jpg" alt="" onclick="openModal('Dahlia Dream', 78, 'Introducing our exclusive limited edition design from the enchanting Flower Collection.Each piece is a celebration of nature beauty, meticulously crafted to bring a touch of elegance to your everyday life.', 'images/dahliadream.jpg')">
                 <div class="des">
                     <span>Flower Collection</span>
@@ -64,7 +49,7 @@
                 </div>
                 <a href="#" class="add-to-cart" data-name="Dahlia Dream" data-price="78"><i class="cart">Add to Cart</i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-category="Flower Collection">
                 <img src="images/bloomelle.jpg" alt="" onclick="openModal('Bloomelle', 78, 'Introducing our exclusive limited edition design from the enchanting Flower Collection.Each piece is a celebration of nature beauty, meticulously crafted to bring a touch of elegance to your everyday life.', 'images/bloomelle.jpg')">
                 <div class="des">
                     <span>Flower Collection</span>
@@ -73,7 +58,7 @@
                 </div>
                 <a href="#" class="add-to-cart" data-name="Bloomelle" data-price="78"><i class="cart">Add to Cart</i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-category="Flower Collection">
                 <img src="images/zarabloom.jpg" alt="" onclick="openModal('Zara Bloom', 78, 'Introducing our exclusive limited edition design from the enchanting Flower Collection.Each piece is a celebration of nature beauty, meticulously crafted to bring a touch of elegance to your everyday life.', 'images/zarabloom.jpg')">
                 <div class="des">
                     <span>Flower Collection</span>
@@ -82,7 +67,7 @@
                 </div>
                 <a href="#" class="add-to-cart" data-name="Zara Bloom" data-price="78"><i class="cart">Add to Cart</i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-category="Flower Collection">
                 <img src="images/freesiaglow.jpg" alt="" onclick="openModal('Freesia Glow', 78, 'Introducing our exclusive limited edition design from the enchanting Flower Collection.Each piece is a celebration of nature beauty, meticulously crafted to bring a touch of elegance to your everyday life.', 'images/freesiaglow.jpg')">
                 <div class="des">
                     <span>Flower Collection</span>
@@ -92,10 +77,9 @@
                 <a href="#" class="add-to-cart" data-name="Freesia Glow" data-price="78"><i class="cart">Add to Cart</i></a>
             </div>
         </div>
-    </section>
 
    <!-- Modal Structure -->
-<div id="product-modal" class="modal">
+   <div id="product-modal" class="modal">
     <div class="modal-content">
         <span class="close-button" onclick="closeModal()">&times;</span>
         <div class="modal-body">
@@ -110,7 +94,10 @@
         </div>
     </div>
 </div>
+
     <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scriptJQuery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 </body>
 </html>
